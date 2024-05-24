@@ -1,0 +1,267 @@
+/* color variables */
+:root {
+  --text-color: #ffffff;
+  --hover-color: #4bf032;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  scroll-behavior: smooth;
+  font-family: "Matrix";
+}
+
+body {
+  color: var(--text-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: black;
+}
+
+nav a  {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+  
+ nav a:hover {
+  color: var(--hover-color);
+  transform: translateY(5px);
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.main-container {
+  display: flex;
+  margin: 10rem 2%;
+  align-items: center;
+  justify-content: space-evenly;
+  line-height: 2;
+  /* height: 80vh */
+
+}
+.main-picture img {
+  border-radius: 5%;
+  width: 20vw;
+}
+
+.bio {
+  margin: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2;
+  /* height: 80vh; */
+}
+
+.skills {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  margin: 4rem;
+  gap: 2rem;
+  line-height: 2;
+}
+h2 {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+ul {
+  line-height: 1.5;
+  list-style: none;
+}
+.projects-header {
+  display: flex;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 4rem;
+  gap: 2rem;
+}
+.video-background {
+  position: relative;
+  /* height: 100vh; Full height */
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+}
+
+hr  {
+  width: 10rem;
+  border: 2px solid #33b219;
+  margin: 0 auto;
+  opacity: 0.5;
+  box-shadow: 0 3px 5px 2px rgba(57, 237, 126, 0.925);
+}
+
+.hr {
+  width: 12rem;
+  margin: auto 0;
+}
+
+ a {
+  text-decoration: none;
+ }
+
+.project-img {
+  border-radius: 5%;
+  box-shadow: 3px 3px 5px 2px rgba(57, 237, 126, 0.925);
+  opacity: 0.5;
+}
+.project-img:hover{
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+ .project-title {
+  font-size: 1.7rem;
+  padding: 1.2rem 0.5rem;
+  color:var(--text-color);
+  text-align: center;
+ }
+ .project:hover .code {
+  color: var(--hover-color);
+}
+ .code {
+  color: transparent;
+  transition: color 0.3s ease-out;
+ }
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* height: 80vh; */
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  max-width: 980px;
+}
+
+.contact-details {
+font-size: 2rem;
+text-shadow: 2px 2px 1px var(--hover-color);
+transition: transform 0.3s ease-out;
+color: #111010;
+}
+.contact-details:hover {
+  transform: translateY(8px);
+}
+.contact-header {
+  font-size: 2rem;
+}
+
+.contact-text {
+  font-size: 1.5rem;
+}
+
+footer {
+  padding: 2rem;
+  border-top: 3px solid var(--hover-color);
+  background-color: transparent;
+
+}
+.left-p {
+  float: left; 
+}
+.right-p {
+  float: right;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  color: transparent;
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 62.5%;
+  }
+  .main-container{
+    margin: 35% 2% 0;
+  }
+  .skills {
+   flex-direction: column;
+  }
+  
+  .projects-section {
+    margin: auto;
+  }
+}
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color:black;
+    text-align: right;
+    line-height: 1.8;
+}
+
+.nav-links.active {
+    display: flex;
+    padding-right: 10px;
+}
+
+.burger {
+    display: flex;
+}
+}
