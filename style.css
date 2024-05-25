@@ -4,8 +4,8 @@
   --hover-color: #4bf032;
 }
 @font-face {
-  font-family: Matrix;
-  src: url('https://www.fontspace.com/matrix-font-f4877') format('truetype');
+  font-family: 'Matrix font';
+  src: url('Matrix-MZ4P.ttf') format('truetype');
 }
 * {
   margin: 0;
@@ -18,7 +18,7 @@
 
 body {
   color: var(--text-color);
-  font-family: Matrix, sans-serif;
+  font-family: 'Matrix font', sans-serif;
 }
 
 header {
