@@ -60,3 +60,45 @@ function compareCosts(estimatedCost, houseCost) {
 
 const compareCostPeter = compareCosts(estimatePeter, 2500000);
 const compareCostJulia = compareCosts(estimateJulia, 1000000);
+
+// Ez Namey (Startup name generator) 
+
+// Arrays with possible startup name fragments
+const firstWords = [
+  "Easy",
+  "Awesome",
+  "Corporate",
+  "Innovative",
+  "Tech",
+  "Bright",
+  "Smart",
+  "Future",
+  "Quick",
+  "Creative"
+];
+
+const secondWords = [
+  "Solutions",
+  "Ventures",
+  "Corporation",
+  "Labs",
+  "Systems", 
+  "Enterprises",
+  "Technologies",
+  "Concepts",
+  "Works",
+  "Dynamics"
+];
+
+// Function to generate a random index between 0 and 9
+function getRandomIndex() {
+    return Math.floor(Math.random() * 10);
+}
+
+// Generate a startup name using random indexes
+const randomFirstIndex = getRandomIndex();
+const randomSecondIndex = getRandomIndex();
+const startupName = firstWords[randomFirstIndex] + " " + secondWords[randomSecondIndex];
+
+// Log the startup name and the number of characters it contains
+console.log(`The startup: "${startupName}" contains ${startupName.length} characters`);
