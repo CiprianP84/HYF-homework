@@ -38,11 +38,12 @@ function houseCost(houseSize, gardenSize) {
   return houseSize * 2.5 * 1000 + gardenSize * 300;
 }
 
-// We save each value in a variable
+// We save the values in a variable
 
-const estimatePeter = houseCost(houseSizePeter, 100);
-const estimateJulia = houseCost(houseSizeJulia, 70);
-
+const estimates = [
+  { name: "Peter", estimate: houseCost(houseSizePeter, 100) },
+  { name: "Julia", estimate: houseCost(houseSizeJulia, 70) }
+];
 
 // We compare the costs
 
@@ -58,8 +59,8 @@ function compareCosts(estimatedCost, houseCost) {
 
 // We save each value in a variable
 
-const compareCostPeter = compareCosts(estimatePeter, 2500000);
-const compareCostJulia = compareCosts(estimateJulia, 1000000);
+const compareCostPeter = compareCosts(estimates[0].estimate, 2500000);
+const compareCostJulia = compareCosts(estimates[1].estimate, 1000000);
 
 // Ez Namey (Startup name generator) 
 
