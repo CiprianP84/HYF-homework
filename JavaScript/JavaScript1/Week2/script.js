@@ -33,3 +33,21 @@ function getEventWeekday(daysFromToday) {
 // Testing the function
 console.log(getEventWeekday(9));
 console.log(getEventWeekday(2));
+
+// Weather wear
+function whatToWear(temperature) {
+  if (temperature < -20) {
+    console.log("Stay at home, it's too cold to be outside!")
+  } else if (temperature < 0) {
+    console.log("Wear a thick coat, gloves, and a hat.")
+  } else if (temperature < 10) {
+    console.log("Wear a coat and gloves.")
+  } else if (temperature < 20) {
+    console.log("Wear a jacket, it's still chilly")
+  } else if (temperature < 30) {
+    console.log("Wear a t-shirt, it's warm!");
+  } else {
+    console.log("Wear shorts, it's hot!");
+  }
+}
+whatToWear(12);
