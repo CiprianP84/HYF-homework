@@ -101,3 +101,44 @@ addStudentToClass("Queen");
 addStudentToClass("Bailey");
 
 console.log(`Number of students in the class: ${getNumberOfStudents()}`);
+
+// Candy helper
+const candyPrices = {
+  sweet: 0.5,
+  chocolate: 0.7,
+  toffee: 1.1,
+  "chewing-gum": 0.03
+};
+
+const boughtCandyPrices = [];
+
+function addCandy(candyType, weight) {
+  if (candyPrices.hasOwnProperty(candyType)) {
+    const price = candyPrices[candyType] * weight;
+    boughtCandyPrices.push(price);
+  } else {
+    console.log(`Candy type ${candyType} is not recognized.`);
+  }
+}
+
+const amountToSpend = Math.random() * 100;
+
+function canBuyMoreCandy() {
+  let totalSpent = 0;
+  for (let i = 0; i < boughtCandyPrices.length; i++) {
+    totalSpent += boughtCandyPrices[i];
+  }
+  return totalSpent < amountToSpend;
+}
+
+// Trying out the function
+addCandy("sweet", 20);
+addCandy("chocolate", 15);
+addCandy("toffee", 10);
+addCandy("chewing-gum", 50);
+
+if (canBuyMoreCandy()) {
+  console.log("Go on, buy some more!");
+} else {
+  console.log("You've had enough candy!");
+}
