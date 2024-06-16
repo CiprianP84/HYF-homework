@@ -51,3 +51,53 @@ function whatToWear(temperature) {
   }
 }
 whatToWear(12);
+
+// Student manager
+const class07Students = [];
+
+function addStudentToClass(studentName) {
+    if (!studentName) {
+        console.log("Name and last name of the student required");
+        return;
+    }
+    if (class07Students.includes(studentName)) {
+        console.log(`Student ${studentName} is already in the class`);
+        return;
+    }
+    if (studentName === "Queen") {
+        class07Students.push(studentName);
+        console.log(`Student ${studentName} added to the class`);
+        return;
+    }
+    if (class07Students.length >= 6) {
+        console.log("Cannot add more students to class 07");
+        return;
+    }
+    class07Students.push(studentName);
+    console.log(`Student ${studentName} added to the class`);
+}
+function getNumberOfStudents() {
+    return class07Students.length;
+}
+
+// Trying the function
+addStudentToClass("Gert");
+addStudentToClass("Ross");
+addStudentToClass("Jake");
+addStudentToClass("Lucy");
+addStudentToClass("Barbara");
+addStudentToClass("Eric");
+
+// Check if you can add more than 6
+addStudentToClass("John");
+
+// Add a student that is already in the class
+addStudentToClass("Tim");
+
+// Add the Queen to a full class
+addStudentToClass("Queen");
+
+// Add another student after adding the Queen
+addStudentToClass("Bailey");
+
+console.log(`Number of students in the class: ${getNumberOfStudents()}`);
